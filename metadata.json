@@ -1,0 +1,5 @@
+{
+  "name": "Quotex Pro Trading Dashboard",
+  "description": "A professional trading dashboard with real-time currency synchronization, signal generation, and market session tracking.",
+  "requestFramePermissions": []
+}
