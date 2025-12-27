@@ -1,14 +1,17 @@
 import { Currency, TradingSession, AccuracyData } from './types';
 
 // Use environment variables for keys if available, otherwise fallback to default
+// Using (import.meta as any).env to avoid TypeScript errors if types are missing
+const env = (import.meta as any).env || {};
+
 export const AD_CONFIG = {
-  appOpen: process.env.VITE_ADMOB_APP_OPEN || 'ca-app-pub-9589522419777492/7251281891',
-  topBanner: process.env.VITE_ADMOB_BANNER || 'ca-app-pub-9589522419777492/2164700078',
-  nativeAdvanced: process.env.VITE_ADMOB_NATIVE || 'ca-app-pub-9589522419777492/5234674404',
-  interstitial: process.env.VITE_ADMOB_INTERSTITIAL || 'ca-app-pub-9589522419777492/7685577928',
-  rewardedInterstitial: process.env.VITE_ADMOB_REWARDED_INTERSTITIAL || 'ca-app-pub-9589522419777492/3347178986',
-  rewarded: process.env.VITE_ADMOB_REWARDED || 'ca-app-pub-9589522419777492/5285455922',
-  rewardedTrade: process.env.VITE_ADMOB_REWARDED_TRADE || 'ca-app-pub-9589522419777492/1650405190',
+  appOpen: env.VITE_ADMOB_APP_OPEN || 'ca-app-pub-9589522419777492/7251281891',
+  topBanner: env.VITE_ADMOB_BANNER || 'ca-app-pub-9589522419777492/2164700078',
+  nativeAdvanced: env.VITE_ADMOB_NATIVE || 'ca-app-pub-9589522419777492/5234674404',
+  interstitial: env.VITE_ADMOB_INTERSTITIAL || 'ca-app-pub-9589522419777492/7685577928',
+  rewardedInterstitial: env.VITE_ADMOB_REWARDED_INTERSTITIAL || 'ca-app-pub-9589522419777492/3347178986',
+  rewarded: env.VITE_ADMOB_REWARDED || 'ca-app-pub-9589522419777492/5285455922',
+  rewardedTrade: env.VITE_ADMOB_REWARDED_TRADE || 'ca-app-pub-9589522419777492/1650405190',
 };
 
 export const CURRENCY_DATA: Currency[] = [

@@ -30,13 +30,14 @@
         --color-primary: #3b82f6;
       }
       
-      /* Custom scrollbar for webkit */
+      /* Custom scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
       }
       ::-webkit-scrollbar-track {
         background: #111827;
+        border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb {
         background: #374151;
@@ -45,19 +46,15 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #4b5563;
       }
+      
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "vite": "https://esm.sh/vite@^7.3.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
-  }
-}
-</script>
 </head>
 <body class="bg-background text-white min-h-screen">
     <div id="root"></div>
